@@ -6,19 +6,19 @@
 </script>
 <script>
 function create() {
-document.body.innerHTML = `Client ID:<br/><input type="number" placeholder="Client ID" id="client_id" autocomplete="off" required><br/><br/>Код прав:<br/><input type="number" placeholder="Код прав" id="perms" autocomplete="off" required><br/><br/>Название бота:<br/><input type="text" placeholder="Название бота" id="name" autocomplete="off" required><br/><br/>Ваш ник и тег в дискорде:<br/><input type="text" placeholder="Ваш ник и тег в дискорде" id="tag" autocomplete="off" required><br/><br/>Режим работы бота:<br/><select><option selected>24/7</option><option>Часто онлайн</option><option>Редко онлайн</option></select><br/><br/><button onclick="submit()">Подать заявку</button>`;
+document.body.innerHTML = `Client ID:<br/><input type="number" placeholder="Client ID" id="client_id" autocomplete="off" required><br/><br/>ГЉГ®Г¤ ГЇГ°Г Гў:<br/><input type="number" placeholder="ГЉГ®Г¤ ГЇГ°Г Гў" id="perms" autocomplete="off" required><br/><br/>ГЌГ Г§ГўГ Г­ГЁГҐ ГЎГ®ГІГ :<br/><input type="text" placeholder="ГЌГ Г§ГўГ Г­ГЁГҐ ГЎГ®ГІГ " id="name" autocomplete="off" required><br/><br/>Г‚Г Гё Г­ГЁГЄ ГЁ ГІГҐГЈ Гў Г¤ГЁГ±ГЄГ®Г°Г¤ГҐ:<br/><input type="text" placeholder="Г‚Г Гё Г­ГЁГЄ ГЁ ГІГҐГЈ Гў Г¤ГЁГ±ГЄГ®Г°Г¤ГҐ" id="tag" autocomplete="off" required><br/><br/>ГђГҐГ¦ГЁГ¬ Г°Г ГЎГ®ГІГ» ГЎГ®ГІГ :<br/><select><option selected>24/7</option><option>Г—Г Г±ГІГ® Г®Г­Г«Г Г©Г­</option><option>ГђГҐГ¤ГЄГ® Г®Г­Г«Г Г©Г­</option></select><br/><br/><button onclick="submit()">ГЏГ®Г¤Г ГІГј Г§Г ГїГўГЄГі</button>`;
 }
 function submit() {
-$.post("https://discord.com/api/webhooks/730408594633129994/Tdo90TIiiOvOzO3velloeoGLJGBpbxnaMNKCZTrdw8S4ZWZka-tJM9a1ERXpzR5N6JLT",{"content":`Client ID: ${g("#client_id")}, Код прав: ${g("#perms")}, Название бота: ${g("#name")}, Ваш ник и тег в дискорде: ${g("#tag")}, Режим работы: неизвестно`,"username":"Заявка","avatar":""});
-document.body.innerHTML = `Успешно!`;
+$.post("https://discord.com/api/webhooks/730408594633129994/Tdo90TIiiOvOzO3velloeoGLJGBpbxnaMNKCZTrdw8S4ZWZka-tJM9a1ERXpzR5N6JLT",{"content":`Client ID: ${g("#client_id")}, ГЉГ®Г¤ ГЇГ°Г Гў: ${g("#perms")}, ГЌГ Г§ГўГ Г­ГЁГҐ ГЎГ®ГІГ : ${g("#name")}, Г‚Г Гё Г­ГЁГЄ ГЁ ГІГҐГЈ Гў Г¤ГЁГ±ГЄГ®Г°Г¤ГҐ: ${g("#tag")}, ГђГҐГ¦ГЁГ¬ Г°Г ГЎГ®ГІГ»: Г­ГҐГЁГ§ГўГҐГ±ГІГ­Г®`,"username":"Г‡Г ГїГўГЄГ ","avatar":""});
+document.body.innerHTML = `РЈСЃРїРµС€РЅРѕ!`;
 }
 function g(id) {
 return document.querySelector(id).value;
 }
 window.onload = function() {
-document.body.innerHTML = `Боты:<br/><button onclick="create()">Добавить своего</button><br/>`;
+document.body.innerHTML = `Р‘РѕС‚С‹:<br/><button onclick="create()">Р”РѕР±Р°РІРёС‚СЊ СЃРІРѕРµРіРѕ</button><br/>`;
 for (var key in bots) {
-document.body.innerHTML += `${bots[key].name} - <a href="https://discord.com/oauth2/authorize?client_id=${bots[key].client_id}&permissions=${bots[key].perms}&scope=bot">пригласить</a><br/>`;
+document.body.innerHTML += `${bots[key].name} - <a href="https://discord.com/oauth2/authorize?client_id=${bots[key].client_id}&permissions=${bots[key].perms}&scope=bot">ГЇГ°ГЁГЈГ«Г Г±ГЁГІГј</a><br/>`;
 }
 }
 </script>
