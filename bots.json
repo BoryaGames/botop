@@ -1,5 +1,5 @@
 var bots = [{
 "name":"FireGamer (V2.0)",
-"client_id":718502216612446298,
-"perms":8
+"client_id":"718502216612446298",
+"perms":"8"
 }];
