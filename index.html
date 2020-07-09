@@ -21,6 +21,7 @@ return document.querySelector(id).value;
 window.onload = function() {
 document.body.innerHTML = `Боты:<br/><button onclick="create()">Добавить своего</button><br/>`;
 for (var key in bots) {
+alert(bots[key]);
 document.body.innerHTML += `${bots[key].name} - <a href="https://discord.com/oauth2/authorize?client_id=${bots[key].client_id}&permissions=${bots[key].perms}&scope=bot">Установить</a><br/>`;
 }
 }
